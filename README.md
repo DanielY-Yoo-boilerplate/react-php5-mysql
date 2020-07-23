@@ -1,9 +1,8 @@
-# React, Typescript, Flask, Postgres (Docker)
+# React, Typescript, PHP 5, MySQL (Docker)
 
 ## How to run
 
-1. Change fields "project_name" to your project name.
-2. Run below command:
+1. Run below command:
 
 ```Bash
 docker-compose up
@@ -12,5 +11,4 @@ docker-compose up
 ## Ports
 
 3000 - app
-3001 - api
-3002 - db
+3001 - api/db
