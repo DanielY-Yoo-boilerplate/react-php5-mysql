@@ -1,23 +1,24 @@
 {
-  "name": "app",
+  "name": "frontend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --color --config webpack.config.js",
-    "lint": "eslint --fix && prettier --write"
+    "lint": "eslint --fix && prettier --write",
+    "rebuild-docker": ""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DanielY-Yoo/react_typescript_template.git"
+    "url": "git+https://github.com/DanielY-Yoo-boilerplate/react-php5-mysql.git"
   },
   "keywords": [],
   "author": "Daniel Yoo",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DanielY-Yoo/react_typescript_template/issues"
+    "url": "https://github.com/DanielY-Yoo-boilerplate/react-php5-mysql/issues"
   },
-  "homepage": "https://github.com/DanielY-Yoo/react_typescript_template#readme",
+  "homepage": "https://github.com/DanielY-Yoo-boilerplate/react-php5-mysql#readme",
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
@@ -44,7 +45,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^2.5.1",
-    "fork-ts-checker-webpack-plugin": "^5.0.7",
+    "fork-ts-checker-webpack-plugin": "^5.0.9",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
     "husky": "^4.2.5",
@@ -57,7 +58,10 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.10.5",
+    "@babel/runtime": "^7.10.5",
     "@types/recharts": "^1.8.14",
+    "axios": "^0.19.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "recharts": "^1.8.5"

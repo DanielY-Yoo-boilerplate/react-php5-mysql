@@ -1,18 +1,17 @@
-version: "3"
+version: '3'
 
 services:
   frontend:
-    build: ./app
+    build: ./frontend
     volumes:
-      - ./app:/app
-      - /app/node_modules
+      - ./frontend:/frontend
+      - /frontend/node_modules
     ports:
       - 3000:3000
   backend:
-    image: "mattrayner/lamp:latest-1604-php5" # PHP 5
+    image: 'mattrayner/lamp:latest-1604-php5' # PHP 5
     volumes:
-      - ${PWD}/api:/app
-      - ${PWD}/app/dist:/app/dist
+      - ${PWD}/app:/app
       - ${PWD}/db:/var/lib/mysql
     ports:
       - 3001:80
