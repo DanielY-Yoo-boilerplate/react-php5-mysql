@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  app:
+    build: ./app
+    volumes:
+      - ./app:/app
+      - /app/node_modules
+    ports:
+      - 3000:3000
+  api:
+    build: ./api
+    volumes:
+      - ./api:/api
+    ports:
+      - 3001:80
+  database:
+    image: "postgres" # Will use latest official version of postgres
+    env_file:
+      - ./db/db.env
+    volumes:
+      - ./db/:/var/lib/postgresql/data/ # persist data locally\
+    ports:
+      - 3002:5432
