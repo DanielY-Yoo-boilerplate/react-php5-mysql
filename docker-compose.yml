@@ -1,24 +1,18 @@
 version: "3"
 
 services:
-  app:
+  frontend:
     build: ./app
     volumes:
       - ./app:/app
       - /app/node_modules
     ports:
       - 3000:3000
-  api:
-    build: ./api
+  backend:
+    image: "mattrayner/lamp:latest-1604-php5" # PHP 5
     volumes:
-      - ./api:/api
+      - ${PWD}/api:/app
+      - ${PWD}/app/dist:/app/dist
+      - ${PWD}/db:/var/lib/mysql
     ports:
       - 3001:80
-  database:
-    image: "postgres" # Will use latest official version of postgres
-    env_file:
-      - ./db/db.env
-    volumes:
-      - ./db/:/var/lib/postgresql/data/ # persist data locally\
-    ports:
-      - 3002:5432
