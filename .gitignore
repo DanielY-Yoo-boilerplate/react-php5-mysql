@@ -20,7 +20,7 @@ node_modules/
 vendor/
 build/
 
-api/
+api/*
 !api/index.php
 
 frontend_backup
