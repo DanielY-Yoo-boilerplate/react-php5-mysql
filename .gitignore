@@ -18,3 +18,10 @@
 db/
 node_modules/
 vendor/
+build/
+
+!api/index.php
+
+api/
+
+frontend_backup

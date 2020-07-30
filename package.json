@@ -16,7 +16,8 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "docker": "docker-compose up --force-recreate --build --remove-orphans",
+    "start": "PORT=3000 CHOKIDAR_USEPOLLING=true NODE_ENV=development react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
