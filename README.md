@@ -17,7 +17,7 @@ tsconfig.json # TS Settings
 
 ## Getting Started
 
-1. Press "Use as Template"
+1. Press "Use this template"
 2. Create a new project
 3. Clone the project
 4. Run the following command in the root directory:
